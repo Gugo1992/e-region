@@ -21,7 +21,7 @@ function initMap() {
     var features = [];
     for (var i in json_ll) {
         if (json_ll.hasOwnProperty(i)) {
-            console.log(typeof parseFloat(json_ll[i].localityLat));
+
             features[i] = {
                 position: new google.maps.LatLng(parseFloat(json_ll[i].localityLat), parseFloat(json_ll[i].localityLong)),
                 type: json_ll[i].type
