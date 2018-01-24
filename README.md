@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 login -> admin
 password -> 123456789
 email -> gevorg.hovhannisyan86@gmail.com
 
 
+=======
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">

@@ -15,7 +15,11 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'id') ?>
+=======
+    <?= $form->field($model, 'ID') ?>
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
 
     <?= $form->field($model, 'localityName') ?>
 

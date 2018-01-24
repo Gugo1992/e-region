@@ -13,11 +13,16 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'mdm' => [
+<<<<<<< HEAD
             'class' => 'mdm\admin\Module',
+=======
+            'class' => 'mdm\admin\Module'
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
         ],
         'user' => [
             'class' => 'dektrium\user\Module',
             'as backend' => 'dektrium\user\filters\BackendFilter',
+<<<<<<< HEAD
             'controllers' => ['profile', 'recovery', 'registration', 'settings'], // not allowed controller in 'backend'
             'enableUnconfirmedLogin' => true,
             'confirmWithin' => 21600,
@@ -25,6 +30,13 @@ return [
             'admins' => ['admin'],
             // Override Model Yii2-user
 
+=======
+           // 'controllers' => ['profile', 'recovery', 'settings'], // not allowed controller in 'backend'
+            'enableUnconfirmedLogin' => true,
+            'confirmWithin' => 21600,
+            'cost' => 12,
+            'admins' => ['child'],
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
             'modelMap' => [
 
                 'Account' => 'backend\models\Account',
@@ -69,6 +81,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'components' => [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
@@ -112,6 +125,18 @@ return [
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],*/
+=======
+
+    'components' => [
+        'request' => [
+            'csrfParam' => '_csrf-backend',
+        ],
+//        'user' => [
+//            'identityClass' => 'common\models\User',
+//            'enableAutoLogin' => true,
+//            'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+//        ],
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
 //        'session' => [
 //            // this is the name of the session cookie used for login on the backend
 //            'name' => 'advanced-backend',
@@ -128,10 +153,40 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+<<<<<<< HEAD
 
     ],
     'as access' => [
           'class' => 'mdm\admin\components\AccessControl',
+=======
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@dektrium/user/views' => '@app/views/user',
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-black',
+                ],
+            ],
+        ],
+
+//        'urlManager' => [
+//            'class' => 'yii\web\UrlManager',
+//            'baseUrl'=>'/e-region/backend/web/',
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'rules' => [
+//            ],
+//        ],
+
+    ],
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
         'allowActions' => [
             'site/*',
             'admin/*',
@@ -142,7 +197,14 @@ return [
 //            'user/registration/register',
 //            'user/registration/resend',
 //            'user/recovery/request',
+<<<<<<< HEAD
         ],
     ],
     'params' => $params,
 ];
+=======
+        ]
+    ],
+    'params' => $params,
+];
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2

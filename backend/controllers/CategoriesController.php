@@ -3,20 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Locality;
-use common\models\search\LocalitySearch;
+use common\models\Categories;
+use common\models\search\CategoriesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-<<<<<<< HEAD
-use yii\helpers;
-=======
->>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
 
 /**
- * LocalityController implements the CRUD actions for Locality model.
+ * CategoriesController implements the CRUD actions for Categories model.
  */
-class LocalityController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * @inheritdoc
@@ -34,12 +30,12 @@ class LocalityController extends Controller
     }
 
     /**
-     * Lists all Locality models.
+     * Lists all Categories models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new LocalitySearch();
+        $searchModel = new CategoriesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +45,7 @@ class LocalityController extends Controller
     }
 
     /**
-     * Displays a single Locality model.
+     * Displays a single Categories model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -62,20 +58,16 @@ class LocalityController extends Controller
     }
 
     /**
-     * Creates a new Locality model.
+     * Creates a new Categories model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Locality();
+        $model = new Categories();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->id]);
-=======
-            return $this->redirect(['view', 'id' => $model->ID]);
->>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
         }
 
         return $this->render('create', [
@@ -84,7 +76,7 @@ class LocalityController extends Controller
     }
 
     /**
-     * Updates an existing Locality model.
+     * Updates an existing Categories model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -95,11 +87,7 @@ class LocalityController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->id]);
-=======
-            return $this->redirect(['view', 'id' => $model->ID]);
->>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
         }
 
         return $this->render('update', [
@@ -108,7 +96,7 @@ class LocalityController extends Controller
     }
 
     /**
-     * Deletes an existing Locality model.
+     * Deletes an existing Categories model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,15 +110,15 @@ class LocalityController extends Controller
     }
 
     /**
-     * Finds the Locality model based on its primary key value.
+     * Finds the Categories model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Locality the loaded model
+     * @return Categories the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Locality::findOne($id)) !== null) {
+        if (($model = Categories::findOne($id)) !== null) {
             return $model;
         }
 

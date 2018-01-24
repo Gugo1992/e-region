@@ -25,7 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+<<<<<<< HEAD
             'id',
+=======
+            'ID',
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
             'localityName',
             'localityLat',
             'localityLong',

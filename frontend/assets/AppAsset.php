@@ -21,6 +21,9 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
 }

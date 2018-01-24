@@ -12,12 +12,17 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
+<<<<<<< HEAD
     "minimum-stability": "stable",
+=======
+    "minimum-stability": "dev",
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+<<<<<<< HEAD
         "almasaeed2010/adminlte": "^2.4",
         "dmstr/yii2-adminlte-asset": "^2.1",
         "dektrium/yii2-user": "dev-master",
@@ -25,6 +30,13 @@
         "kartik-v/yii2-sortable": "*",
         "2amigos/yii2-google-maps-library": "*"
 
+=======
+        "dmstr/yii2-adminlte-asset": "^2.1",
+        "dektrium/yii2-user": "dev-master",
+        "dektrium/yii2-rbac": "1.0.0-alpha@dev",
+        "mdmsoft/yii2-admin": "dev-master",
+        "kartik-v/yii2-sortable": "*"
+>>>>>>> d8fd41d4d6fe830d5f958951e3fb4f871f4e8aa2
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
